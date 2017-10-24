@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:iLibras" 
+    x:Class="iLibras.Pages.iLibrasPage">
+	<StackLayout
+        VerticalOptions="Center" Margin="45,0,45,0">
+        <StackLayout>
+            <Entry x:Name="edtLogin" Placeholder="Login"/>
+        </StackLayout>
+        <StackLayout Margin="0,15,0,0">
+            <Entry 
+                x:Name="edtSenha" 
+                IsPassword="true" 
+                Placeholder="Senha"/>
+        </StackLayout>
+        <StackLayout Margin="15,0,0,0">
+            <Label>Esqueceu sua senha?</Label>
+        </StackLayout>
+        <StackLayout Margin="45,0,45,0">
+            <Button 
+                Text="Logar"
+                x:Name="btnLogin"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

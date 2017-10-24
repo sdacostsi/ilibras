@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+    x:Class="iLibras.Pages.iLibrasCadastros"
+    Title="Cadastros">
+    <StackLayout Padding="20" HorizontalOptions="Center">
+        <Button x:Name="btnCategoria" Text="Categoria"/>
+        <Button x:Name="btnLocalizacao" Text="Localização"/>
+        <Button x:Name="btnRegiao" Text="Região"/>
+        <Button x:Name="btnSinal" Text="Sinal"/>
+        <Button x:Name="btnTag" Text="Tag"/>
+        <Button x:Name="btnTermo" Text="Termo"/>
+    </StackLayout>
+</ContentPage>

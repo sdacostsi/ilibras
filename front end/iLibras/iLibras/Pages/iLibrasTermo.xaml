@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:iLibras"
+    x:Class="iLibras.Pages.iLibrasTermo"
+    Title="Voltar">
+    <StackLayout Orientation="Vertical" Padding="20">
+        <TableView>
+            <TableView.Root>
+                <TableSection>
+                    <EntryCell x:Name="ecDescricao" Label="Descrição"></EntryCell>                    
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Categoria" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Picker x:Name="pckCategoria" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Tag" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Picker x:Name="pckTag" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+        <Button x:Name="btnCadastrar" Text="Cadastrar"/>
+    </StackLayout>
+</ContentPage>

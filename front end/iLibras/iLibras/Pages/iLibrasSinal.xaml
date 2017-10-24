@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:iLibras"
+    x:Class="iLibras.Pages.iLibrasSinal"
+    Title="Voltar">
+	<StackLayout Orientation="Vertical" Padding="20">
+        <TableView>
+            <TableView.Root>
+                <TableSection>
+                    <EntryCell x:Name="ecDescricao" Label="Descrição"></EntryCell>
+                    <EntryCell x:Name="ecConfMao" Label="Conf Mao"></EntryCell>
+                    <EntryCell x:Name="ecExpressao" Label="Expressao"></EntryCell>
+                    <EntryCell x:Name="ecOrientacao" Label="Orientação"></EntryCell>
+                    <EntryCell x:Name="ecPontoArticulacao" Label="Ponto articulação"></EntryCell>
+                    <EntryCell x:Name="ecComVid" Label="Com Vid"></EntryCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Termo" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Picker x:Name="pckTermo" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Localizacao" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Picker x:Name="pckLocalizacao" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+        <Button x:Name="btnCadastrar" Text="Cadastrar">
+        </Button>
+    </StackLayout>
+</ContentPage>

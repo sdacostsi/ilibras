@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="iLibras.Pages.iLibrasLocalizacao">
+	<StackLayout>
+        <TableView>
+            <TableView.Root>
+                <TableSection Title="Localização">
+                    <EntryCell x:Name="ecDescricao" Label="Descrição"/>                    
+                </TableSection>
+                <TableSection Title="Endereço">
+                    <EntryCell x:Name="ecLogradouro" Label="Logradouro"/>
+                    <EntryCell x:Name="ecBairro" Label="Bairro"/>
+                    <EntryCell x:Name="ecNumero" Label="Número" Keyboard="Numeric"/>
+                    <EntryCell x:Name="ecComplemento" Label="Complemento"/>
+                    <EntryCell x:Name="ecCidade" Label="Cidade"/>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="15,10,10,10">
+                                <Label Text="Estado" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Picker x:Name="pckEstado" HorizontalOptions="FillAndExpand" Title="Estado"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+        <Button x:Name="btnCadastrar" Clicked="btnCadastrar_Clicked"/>
+    </StackLayout>
+</ContentPage>
