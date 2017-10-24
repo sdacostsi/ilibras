@@ -5,7 +5,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="iLibras/Model/RequestAPI.cs">
     <Files>
       <File FileName="iLibras/Pages/iLibrasHome.xaml" Line="8" Column="1" />
-      <File FileName="iLibras/Pages/Detail.xaml" Line="12" Column="32" />
+      <File FileName="iLibras/Pages/Detail.xaml" Line="35" Column="1" />
       <File FileName="iLibras/Pages/Detail.xaml.cs" Line="17" Column="38" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
       <File FileName="iLibras/Pages/Master.xaml" Line="13" Column="1" />

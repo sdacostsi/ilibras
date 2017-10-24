@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/FormsViewGroup/library_project_imports/formsviewgroup.jar</Jars>
+  <Jars>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/FormsViewGroup/library_project_imports/formsviewgroup.jar</Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/ButtonCircle.FormsPlugin.Android/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/ButtonCircle.FormsPlugin.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/ButtonCircle.FormsPlugin.Android/library_project_imports/assets</ResolvedAssetDirectory>
@@ -13,8 +13,8 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/ButtonCircle.FormsPlugin.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/ButtonCircle.FormsPlugin.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/freitas/Projects/iLibras/front end/iLibras/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
