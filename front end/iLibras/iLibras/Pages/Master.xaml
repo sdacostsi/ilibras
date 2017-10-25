@@ -5,7 +5,7 @@
     x:Class="iLibras.Pages.Master"
     Title="iLibras"
     Icon="menu.png"
-    BackgroundColor="Silver">
+    BackgroundColor="#d6d6f5"> 
     <StackLayout Padding="20">
         <Button x:Name="btnLogin" Text="Login"/>
     </StackLayout>

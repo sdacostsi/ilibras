@@ -11,8 +11,7 @@
 namespace iLibras.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/freitas/Projects/projeto_libras/ilibras/front end/iLibras/iLibras/Pages/De" +
-        "tail.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/freitas/Projects/iLibras/front end/iLibras/iLibras/Pages/Detail.xaml")]
     public partial class Detail : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

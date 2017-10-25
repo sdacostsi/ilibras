@@ -11,8 +11,7 @@
 namespace iLibras.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/freitas/Projects/projeto_libras/front end/iLibras/iLibras/Pages/iLibrasHom" +
-        "e.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/freitas/Projects/iLibras/front end/iLibras/iLibras/Pages/iLibrasHome.xaml")]
     public partial class iLibrasHome : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

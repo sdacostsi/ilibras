@@ -129,11 +129,15 @@
   <ItemGroup>
     <BundleResource Include="Resources\menu.png" />
     <BundleResource Include="Resources\ic_add_white.png" />
-    <BundleResource Include="Resources\dicionario.png" />
     <BundleResource Include="Resources\libras.png" />
     <BundleResource Include="Resources\config.png" />
-    <BundleResource Include="Resources\escrita_simples.png" />
-    <BundleResource Include="Resources\galeria.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\picture.png" />
+    <BundleResource Include="Resources\writer.png" />
+    <BundleResource Include="Resources\dictionary.png" />
+    <BundleResource Include="Resources\home2.png" />
+    <BundleResource Include="Resources\home1.png" />
+    <BundleResource Include="Resources\paisagem.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\search.png" />

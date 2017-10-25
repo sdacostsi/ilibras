@@ -2,15 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.iLibras.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C6F356BE-1CF9-413F-85FE-AE50B2F65785">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.iLibras.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="iLibras/Model/RequestAPI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iLibras/Pages/Detail.xaml">
     <Files>
-      <File FileName="iLibras/Pages/iLibrasHome.xaml" Line="8" Column="1" />
-      <File FileName="iLibras/Pages/Detail.xaml" Line="35" Column="1" />
+      <File FileName="iLibras/Pages/iLibrasHome.xaml" Line="7" Column="31" />
+      <File FileName="iLibras/Pages/Detail.xaml" Line="12" Column="45" />
       <File FileName="iLibras/Pages/Detail.xaml.cs" Line="17" Column="38" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="iLibras/Pages/Master.xaml" Line="13" Column="1" />
+      <File FileName="iLibras/Pages/Master.xaml" Line="8" Column="30" />
       <File FileName="iLibras/Pages/Master.xaml.cs" Line="13" Column="13" />
-      <File FileName="iLibras/Model/RequestAPI.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -18,7 +17,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.iLibras.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.iLibras.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.iLibras HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
 </Properties>

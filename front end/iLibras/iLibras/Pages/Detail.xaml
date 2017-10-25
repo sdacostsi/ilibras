@@ -8,27 +8,87 @@
     BackgroundColor="Silver">
     <ContentPage Icon="menu.png">
         <StackLayout Orientation="Vertical">
-            <Label Text="Teste"/>
-            <local:CircleButton
-                Image="ic_add_white.png"
-                FontSize="30" TextColor="Black" 
-                HeightRequest="50" WidthRequest="50" 
-                BorderThickness="2" BorderColor="Red"
-                BackgroundColor="#ff3333" Clicked="Handle_Clicked"
-                VerticalOptions="End" HorizontalOptions="End">
-            </local:CircleButton>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
+                <Image Source="home1.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <local:CircleButton
+                    Image="ic_add_white.png"
+                    FontSize="30" TextColor="Black" 
+                    HeightRequest="50" WidthRequest="50" 
+                    BorderThickness="2" BorderColor="Red"
+                    BackgroundColor="#ff3333" Clicked="Handle_Clicked"
+                    VerticalOptions="End" HorizontalOptions="End">
+                </local:CircleButton>
+            </StackLayout>
         </StackLayout>
     </ContentPage>
-    <ContentPage Icon="escrita_simples.png">
-        
+    <ContentPage Icon="writer.png">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
+                <Image Source="home2.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <local:CircleButton
+                    Image="ic_add_white.png"
+                    FontSize="30" TextColor="Black" 
+                    HeightRequest="50" WidthRequest="50" 
+                    BorderThickness="2" BorderColor="Red"
+                    BackgroundColor="#ff3333" Clicked="Handle_Clicked"
+                    VerticalOptions="End" HorizontalOptions="End">
+                </local:CircleButton>
+            </StackLayout>
+        </StackLayout>
     </ContentPage>
-    <ContentPage Icon="galeria.png">
-        
+    <ContentPage Icon="picture.png">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Image Source="paissagem.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <local:CircleButton
+                    Image="ic_add_white.png"
+                    FontSize="30" TextColor="Black" 
+                    HeightRequest="50" WidthRequest="50" 
+                    BorderThickness="2" BorderColor="Red"
+                    BackgroundColor="#ff3333" Clicked="Handle_Clicked"
+                    VerticalOptions="End" HorizontalOptions="End">
+                </local:CircleButton>
+            </StackLayout>
+        </StackLayout>
     </ContentPage>
-    <ContentPage Title="dicionario.png">
-        
+    <ContentPage Icon="dictionary.png">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Label Text="Teste"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <local:CircleButton
+                    Image="ic_add_white.png"
+                    FontSize="30" TextColor="Black" 
+                    HeightRequest="50" WidthRequest="50" 
+                    BorderThickness="2" BorderColor="Red"
+                    BackgroundColor="#ff3333" Clicked="Handle_Clicked"
+                    VerticalOptions="End" HorizontalOptions="End">
+                </local:CircleButton>
+            </StackLayout>
+        </StackLayout>
     </ContentPage>
-    <ContentPage Title="config.png">
-        
+    <ContentPage Icon="settings.png">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Label Text="Teste"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <local:CircleButton
+                    Image="ic_add_white.png"
+                    FontSize="30" TextColor="Black" 
+                    HeightRequest="50" WidthRequest="50" 
+                    BorderThickness="2" BorderColor="Red"
+                    BackgroundColor="#ff3333" Clicked="Handle_Clicked"
+                    VerticalOptions="End" HorizontalOptions="End">
+                </local:CircleButton>
+            </StackLayout>
+        </StackLayout>
     </ContentPage>
 </TabbedPage>
