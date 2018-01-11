@@ -11,8 +11,7 @@
 namespace iLibras.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/freitas/Projects/projeto_libras/front end/iLibras/iLibras/Pages/iLibrasReg" +
-        "iao.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Xam.Forms\\Simone\\ilibras\\front end\\iLibras\\iLibras\\Pages\\iLibrasRegiao.xaml")]
     public partial class iLibrasRegiao : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

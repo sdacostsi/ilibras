@@ -1,6 +1,8 @@
 ﻿using Xamarin.Forms;
 using iLibras.Pages;
 using System.Threading.Tasks;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
 
 namespace iLibras
 {
@@ -8,9 +10,23 @@ namespace iLibras
     {
         public static MasterDetailPage MasterDetail { get; set; }
 
+        public static bool APPIsConnected { get; set; }
+
         public App()
         {
             InitializeComponent();
+
+
+            //Network conection
+            CrossConnectivity.Current.ConnectivityChanged += HandleConnectivityChanged;
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                APPIsConnected = false;
+            }
+            else
+            {
+                APPIsConnected = true;
+            }
 
             MainPage = new iLibrasHome();
         }
@@ -20,6 +36,12 @@ namespace iLibras
             App.MasterDetail.IsPresented = false;
             await MasterDetail.Detail.Navigation.PushAsync(page);
         }
+
+        void HandleConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+            APPIsConnected = e.IsConnected;
+        }
+
 
         protected override void OnStart()
         {

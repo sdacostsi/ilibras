@@ -3,10 +3,246 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="iLibras.Pages.Master"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
     Title="iLibras"
     Icon="menu.png"
-    BackgroundColor="#d6d6f5"> 
-    <StackLayout Padding="20">
-        <Button x:Name="btnLogin" Text="Login"/>
+    BackgroundColor="White">
+    <!--"{StaticResource BackgroundColor}">-->
+    <StackLayout
+        Margin="0,0,0,0"
+        Padding="0">
+        <Frame
+            BackgroundColor="{StaticResource MenuHeaderColor}"
+            CornerRadius="0"
+            HeightRequest="110"
+            HorizontalOptions="FillAndExpand"
+            Margin="0,0,0,0"
+            Padding="5">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Orientation="Horizontal">
+                <controls:CircleImage 
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    Margin="0,30,0,0"
+                    Source="avatar_black.png"
+                    VerticalOptions="Center"
+                    WidthRequest="60">
+                </controls:CircleImage>
+                <Label
+                    BackgroundColor="Transparent"
+                    FontSize="13"
+                    HorizontalTextAlignment="Start"
+                    Margin="10,0,0,20"
+                    VerticalOptions="End"
+                    Text="EmailUsaurio@gamail.com"
+                    TextColor="{StaticResource MenuFontColor}"
+                    WidthRequest="180">
+                </Label>
+            </StackLayout>
+        </Frame>
+
+        <ScrollView>
+            <StackLayout
+                Orientation="Vertical">
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    x:Name="menu_GIFLibras">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="menu_GIFLibras_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image
+                        HeightRequest="45"
+                        HorizontalOptions="End"
+                        Margin="10,0,15,0"
+                        Source="libras.png"
+                        VerticalOptions="Center"
+                        WidthRequest="45">
+                    </Image>
+                    <Label
+                      FontSize="Small"
+                      FontAttributes="Bold"
+                      Text="GIF Libras"
+                      TextColor="{StaticResource MenuFontColor}"
+                      VerticalOptions="Center">
+                    </Label>
+                </StackLayout>
+
+
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            x:Name="menu_Contexto">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="menu_Contexto_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image
+                HeightRequest="45"
+                HorizontalOptions="End"
+                Margin="10,0,15,0"
+                Source="menu_contexto.png"
+                VerticalOptions="Center"
+                WidthRequest="45">
+            </Image>
+            <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Text="Contexto"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+            </Label>
+        </StackLayout>
+
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            x:Name="menu_ImgRepresent">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="menu_ImgRepresent_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image
+                HeightRequest="55"
+                HorizontalOptions="End"
+                Margin="10,0,0,0"
+                Source="menu_represent.png"
+                VerticalOptions="Center"
+                WidthRequest="55">
+            </Image>
+            <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Text="Imagem representativa"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+            </Label>
+        </StackLayout>
+
+
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            x:Name="menu_EscritaSinais">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="menu_EscritaSinais_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image
+                HeightRequest="55"
+                HorizontalOptions="End"
+                Margin="10,0,0,0"
+                Source="menu_EscritaSinais.png"
+                VerticalOptions="Center"
+                WidthRequest="55">
+            </Image>
+            <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Text="Escrita de sinais"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+            </Label>
+        </StackLayout>
+
+
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            x:Name="menu_iLibrasExplica">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="menu_iLibrasExplica_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image
+                HeightRequest="55"
+                HorizontalOptions="End"
+                Margin="10,0,0,0"
+                Source="menu_Information.png"
+                VerticalOptions="Center"
+                WidthRequest="55">
+            </Image>
+            <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Text="iLibras explica"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+            </Label>
+        </StackLayout>
+
+        <BoxView 
+            BackgroundColor="Gray"
+            Margin="5,10,10,0"
+            HeightRequest="1" 
+            HorizontalOptions="FillAndExpand" />
+        
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Margin="30,5,0,0"
+              Text="Atribuir Perfil"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Margin="30,10,0,0"
+              Text="Categorias"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Margin="30,10,0,0"
+              Text="Tag"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Margin="30,10,0,0"
+              Text="Estado"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              Margin="30,10,0,0"
+              Text="Sincronizar"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+
+        <Label
+              FontSize="Small"
+              FontAttributes="Bold"
+              HorizontalOptions="End"
+              Margin="30,10,30,0"
+              Text="Sair"
+              TextColor="{StaticResource MenuFontColor}"
+              VerticalOptions="Center">
+        </Label>
+
+
+        <Button
+            Margin="20,10"
+            Text="Login"
+            x:Name="btnLogin"/>
+
+        </StackLayout>
+    </ScrollView>
+
     </StackLayout>
 </ContentPage>

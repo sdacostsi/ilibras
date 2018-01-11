@@ -38,13 +38,6 @@ public class MonoPackageManager {
 				String cacheDir     = context.getCacheDir ().getAbsolutePath ();
 				String dataDir      = getNativeLibraryPath (context);
 				ClassLoader loader  = context.getClassLoader ();
-				java.io.File external0 = android.os.Environment.getExternalStorageDirectory ();
-				String externalDir = new java.io.File (
-							external0,
-							"Android/data/" + context.getPackageName () + "/files/.__override__").getAbsolutePath ();
-				String externalLegacyDir = new java.io.File (
-							external0,
-							"../legacy/Android/data/" + context.getPackageName () + "/files/.__override__").getAbsolutePath ();
 
 				Runtime.init (
 						language,
@@ -56,10 +49,9 @@ public class MonoPackageManager {
 							dataDir,
 						},
 						loader,
-						new String[] {
-							externalDir,
-							externalLegacyDir
-						},
+						new java.io.File (
+							android.os.Environment.getExternalStorageDirectory (),
+							"Android/data/" + context.getPackageName () + "/files/.__override__").getAbsolutePath (),
 						MonoPackageManager_Resources.Assemblies,
 						context.getPackageName ());
 				
@@ -110,6 +102,15 @@ class MonoPackageManager_Resources {
 		"ButtonCircle.FormsPlugin.Abstractions.dll",
 		"ButtonCircle.FormsPlugin.Android.dll",
 		"FormsViewGroup.dll",
+		"ImageCircle.Forms.Plugin.Abstractions.dll",
+		"ImageCircle.Forms.Plugin.Android.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
+		"Rg.Plugins.Popup.dll",
+		"Rg.Plugins.Popup.Droid.dll",
+		"Rg.Plugins.Popup.Platform.dll",
+		"SQLite.Net.dll",
+		"SQLite.Net.Platform.XamarinAndroid.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",

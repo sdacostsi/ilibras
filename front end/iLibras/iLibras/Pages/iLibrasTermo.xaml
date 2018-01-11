@@ -9,7 +9,7 @@
         <TableView>
             <TableView.Root>
                 <TableSection>
-                    <EntryCell x:Name="ecDescricao" Label="Descrição"></EntryCell>                    
+                    <EntryCell x:Name="ecDescricao" Label="Descrição"></EntryCell>
                     <ViewCell>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">

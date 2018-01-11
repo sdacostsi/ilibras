@@ -2,5 +2,20 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="iLibras.App">
 	<Application.Resources>
 		<!-- Application resource dictionary -->
-	</Application.Resources>
+        <ResourceDictionary>
+            <!-- naranja resaltador -->
+            <Color x:Key="AcennentColor">#FF4081</Color>
+            <!-- blanco anterior: #ffccff-->
+            <Color x:Key="BackgroundColor">#d6d6f5</Color>
+            <!--violeta oscuro -->
+            <Color x:Key="FontColor">#ffffff</Color>
+            <!-- lila -->
+            <Color x:Key="MainColor">#2196F3</Color>
+            <!-- rosa perfumerias -->
+            <Color x:Key="MenuColor">#ffffff</Color>
+            <Color x:Key="MenuFontColor">#000000</Color>
+            <!--violeta oscuro -->
+            <Color x:Key="MenuHeaderColor">#1976D2</Color>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

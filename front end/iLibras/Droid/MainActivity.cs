@@ -10,7 +10,12 @@ using Android.OS;
 
 namespace iLibras.Droid
 {
-    [Activity(Label = "iLibras.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "iLibras",
+        Icon = "@drawable/icon",
+        Theme = "@style/MyTheme",
+        MainLauncher = false,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

@@ -11,8 +11,9 @@
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
                 <Image Source="home1.png" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
-            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+            <StackLayout Margin="0,-30,0,50" VerticalOptions="End" Padding="0,0,10,10">
                 <local:CircleButton
+                    BorderRadius="50"
                     Image="ic_add_white.png"
                     FontSize="30" TextColor="Black" 
                     HeightRequest="50" WidthRequest="50" 
@@ -28,8 +29,9 @@
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
                 <Image Source="home2.png" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
-            <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+            <StackLayout Margin="0,-100,10,50" VerticalOptions="End">
                 <local:CircleButton
+                    BorderRadius="50"
                     Image="ic_add_white.png"
                     FontSize="30" TextColor="Black" 
                     HeightRequest="50" WidthRequest="50" 
@@ -46,7 +48,17 @@
                 <Image Source="paissagem.png" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
             <StackLayout VerticalOptions="End" Padding="0,0,10,10">
+                <WebView
+                    BackgroundColor="White"
+                    WidthRequest="100" HeightRequest="100"
+                    Source="https://api.detaxi.net:2500/img/motoristas/load.gif"
+                    HorizontalOptions = "CenterAndExpand" 
+                    VerticalOptions = "CenterAndExpand"
+                    x:Name="WebViewGIF"/>
+                <Button x:Name="btnChangeGif" Text="Change GIF"/>
+
                 <local:CircleButton
+                    BorderRadius="50"
                     Image="ic_add_white.png"
                     FontSize="30" TextColor="Black" 
                     HeightRequest="50" WidthRequest="50" 
@@ -64,6 +76,7 @@
             </StackLayout>
             <StackLayout VerticalOptions="End" Padding="0,0,10,10">
                 <local:CircleButton
+                    BorderRadius="50"
                     Image="ic_add_white.png"
                     FontSize="30" TextColor="Black" 
                     HeightRequest="50" WidthRequest="50" 
@@ -81,6 +94,7 @@
             </StackLayout>
             <StackLayout VerticalOptions="End" Padding="0,0,10,10">
                 <local:CircleButton
+                    BorderRadius="50"
                     Image="ic_add_white.png"
                     FontSize="30" TextColor="Black" 
                     HeightRequest="50" WidthRequest="50" 
