@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>  
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="iLibras.Pages.iLibrasLogin">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="600"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
+        <StackLayout BackgroundColor="White" Padding="0, 0, 0, 0">
+            <Image
+                HeightRequest="55"
+                HorizontalOptions="Center"
+                Margin="0,10,0,0"
+                Source="icon_header.jpg"
+                VerticalOptions="Center"
+                WidthRequest="146">
+            </Image>
+            <ScrollView>
+                <StackLayout
+                    Orientation="Vertical"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout
+                        Margin="0,5,0,0"
+                        Orientation="Vertical"
+                        Padding="20" 
+                        Spacing="20">
+                        <Grid
+                            HeightRequest="100"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="19*" />
+                        </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" Source="avatar_black.png" Aspect="AspectFit" VerticalOptions="Center" />
+                            <Entry
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="18"
+                                Unfocused="EntryUsuario_Unfocused"
+                                Text="" 
+                                TextColor="Black"
+                                Keyboard="Email"
+                                Placeholder="E-mail"
+                                x:Name="EntryUsuario">
+                            </Entry>
+                            <Image Grid.Row="1" Grid.Column="0" Source="key.png" Aspect="AspectFit" VerticalOptions="Center"  />
+                            <Entry
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name="EntrySenha"
+                                FontSize="18"
+                                Text=""
+                                Placeholder="Senha"
+                                IsPassword="True"
+                                TextColor="Black">
+                            </Entry>
+                        </Grid>
+
+                        <StackLayout
+                            HeightRequest="40"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                            <StackLayout
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="RetriveKey_Tapped"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label
+                                    FontSize="15"
+                                    Text="Recuperar Senha"
+                                    TextColor="Blue"
+                                    VerticalOptions="Center"
+                                    x:Name="LblRetriveKey">
+                                </Label>
+                            </StackLayout>
+
+                            <StackLayout
+                                BackgroundColor="Transparent"
+                                HeightRequest="40"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Padding="5,0,-5,0">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ShowKey_Tapped"/>
+                                </StackLayout.GestureRecognizers>
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Margin="0,0,0,0"
+                                    Source="checkOff.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25"
+                                    x:Name="ImgChechPayShowKey"/>
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="15"
+                                    HorizontalOptions="FillAndExpand"
+                                    Margin="2,0,0,0"
+                                    Text="Mostrar senha"
+                                    VerticalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <ActivityIndicator
+                            IsRunning="False"
+                            IsVisible="False"
+                            x:Name="GetUser">
+                        </ActivityIndicator>
+                        <Button
+                          BackgroundColor="{StaticResource MainColor}"
+                          Clicked="Login_Clicked"
+                          Font="Bold"
+                          FontSize="20"
+                          Text="LOGIN"
+                          TextColor="White"
+                          x:Name="BtnLogIn"/>
+
+                        <Button
+                          BackgroundColor="{StaticResource MainColor}"
+                          Clicked="BtnNewAccount_Clicked"
+                          Font="Bold"
+                          FontSize="20"
+                          Text="CADASTRE-SE"
+                          TextColor="White"
+                          x:Name="BtnNewAccount"/>
+                    </StackLayout>
+        
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

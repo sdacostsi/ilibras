@@ -1,0 +1,31 @@
+Key Par: iLibras_EC2
+03:fd:d2:4b:57:ae:a2:a4:f7:6a:c6:94:f0:c9:fb:11:39:f1:0c:31
+
+
+MyIp in security Group
+186.205.3.168/32
+http:	80		open
+ssh:	22		open
+ssh	3000		open
+
+Elastic IP:	35.160.42.82
+
+IPv4 Public IP:	35.160.42.82
+
+Instance ID:		i-073f9091df02518a7
+
+Public DNS (IPv4):	ec2-35-160-42-82.us-west-2.compute.amazonaws.com
+
+
+
+Putty	https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/putty.html
+
+	Host Name:	ec2-user@ec2-35-160-42-82.us-west-2.compute.amazonaws.com
+	
+
+Install Node.js:	https://docs.aws.amazon.com/es_es/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+	update new version node:	nvm install 8.9.4 --reinstall-packages-from=6.11.5
+
+Install github:
+	sudo yum install git
+
