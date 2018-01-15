@@ -3,6 +3,8 @@ using iLibras.Pages;
 using System.Threading.Tasks;
 using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
+using iLibras.Model;
+using iLibras.Services;
 
 namespace iLibras
 {
@@ -10,12 +12,28 @@ namespace iLibras
     {
         public static MasterDetailPage MasterDetail { get; set; }
 
+        DataService _DataService;
+
+        public static string BaseAddressAPIServicesAPP { get; set; }
+
         public static bool APPIsConnected { get; set; }
+
+        public static User CurrentUserAPP;
+
 
         public App()
         {
             InitializeComponent();
+            CurrentUserAPP = new User();
+            BaseAddressAPIServicesAPP = "http://35.160.42.82:3000/";
 
+
+            // valido que exista un usario para entrar directo al home
+            _DataService = new DataService();
+            var UserActivo = _DataService.GetUser();
+            if (UserActivo != null) {
+                CurrentUserAPP = UserActivo;
+            }
 
             //Network conection
             CrossConnectivity.Current.ConnectivityChanged += HandleConnectivityChanged;

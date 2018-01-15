@@ -17,7 +17,11 @@ CategoriaDao.prototype.pesquisar = function(descricao, callback){
 }
 
 CategoriaDao.prototype.salvar = function(categoria, callback){
-    this._connection.query('INSERT INTO categoria(descri_cat) VALUES (?)', categoria.descricao, callback)
+//    this._connection.query('INSERT INTO ilibras.categoria(descri_cat) VALUES (?)', categoria.descricao, callback)
+    this._connection.query('INSERT INTO ilibras.categoria(descri_cat) VALUES (?)', [categoria], callback)
+//    this._connection.query('INSERT INTO ilibras.categoria(descri_cat) VALUES (?)', [categoria], callback)
+//    this._connection.query('INSERT INTO ilibras.categoria(descri_cat) VALUES ("' + categoria.descricao + '")', categoria.descricao, callback)
+//    this._connection.query('INSERT INTO ilibras.categoria(descri_cat) VALUES ("categoriadescricao")', categoria.descricao, callback)
 }
 
 CategoriaDao.prototype.deletar = function(categoria, callback){

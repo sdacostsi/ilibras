@@ -15,13 +15,10 @@ namespace iLibras.Services
 
         public async Task<List<T>> Get<T>(string ApiControlerParameter)
         {
-            //ApiControlerParameter = users/[controler]/[_key]
-            //ApiControlerParameter = chofer/[controler]/[_key]
             try
             {
-
                 var client = new HttpClient();
-                client.BaseAddress = new Uri("https://api.detaxi.net:74");
+                client.BaseAddress = new Uri(App.BaseAddressAPIServicesAPP);
 
                 var url = string.Format("/api/{0}", ApiControlerParameter);
                 var response = await client.GetAsync(url);
@@ -32,20 +29,6 @@ namespace iLibras.Services
                 }
 
                 var result = await response.Content.ReadAsStringAsync();
-
-/*
-                if (result.ToString().Contains("{\"model\":null,\"results\":"))
-                {// TIRO O RESULT A A LA MERDA
-                    result = result.ToString().Replace("{\"model\":null,\"results\":", "{");
-                    result = result.ToString().Substring(1, result.ToString().Length - 2).ToString();
-                }
-                if (result.ToString().Contains("{\"results\":"))
-                {// TIRO O RESULTA A LA MERDA
-                    result = result.ToString().Replace("{\"results\":", "{");
-                    result = result.ToString().Substring(1, result.ToString().Length - 2).ToString();
-                }
-*/
-
 
                 if (result.ToString().Substring(0, 1).ToString() != "[")
                 {
@@ -63,14 +46,12 @@ namespace iLibras.Services
 
         public async Task<List<T>> Post<T>(string ApiControler, object JSON)
         {
-            //ApiControler = users/[controler]
-            //ApiControler = chofer/[controler]
             try
             {
                 var request = JsonConvert.SerializeObject(JSON);
                 var body = new StringContent(request, Encoding.UTF8, "application/json");
                 var client = new HttpClient();
-                client.BaseAddress = new Uri("https://api.detaxi.net:74");
+                client.BaseAddress = new Uri(App.BaseAddressAPIServicesAPP);
                 var url = string.Format("/api/{0}", ApiControler);
                 var response = await client.PostAsync(url, body);
 

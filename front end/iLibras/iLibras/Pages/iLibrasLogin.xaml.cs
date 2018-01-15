@@ -66,13 +66,56 @@ namespace iLibras.Pages
         {
             GetUser.IsVisible = true;
             GetUser.IsRunning = true;
+            APIServices _APIServices;
+            _APIServices = new Services.APIServices();
 
-            await DisplayAlert("Login ", "Codigo de login aqui", "Aceptar");
+            //await DisplayAlert("Login ", "Codigo de login aqui", "Aceptar");
 
+
+            List<User> MyUser;
+            MyUser = new List<User>();
+            MyUser = await _APIServices.Get<User>("usuario/logar?email=" + UserEmail + "&senha=" + Password);
+
+            if (MyUser == null)
+            {
+                ShowMessage("iLibras", "Não se pode conetar ao servidor, por favor tente novamente.");
+                GetUser.IsVisible = false;
+                GetUser.IsRunning = false;
+                BtnLogIn.IsVisible = true;
+                BtnNewAccount.IsVisible = true;
+                return;
+            }
+
+            if (MyUser.Count == 0 || MyUser[0].email_usu == null) 
+            {
+                ShowMessage("iLibras", "Usuário ou senha incorreta, por favor tente novamente.");
+                GetUser.IsVisible = false;
+                GetUser.IsRunning = false;
+                BtnLogIn.IsVisible = true;
+                BtnNewAccount.IsVisible = true;
+                return;
+            }
+
+            Master.menuEmailUsuario.Text = MyUser[0].email_usu;
+            string SourceFoto = string.Format("{0}img_users/{1}.jpg"
+                , App.BaseAddressAPIServicesAPP
+                , MyUser[0].codfot_usu.ToString()
+            );
+
+            Master.menuFotoUser.Source = SourceFoto;
+            Master.sairLogin.Text = "Fechar Sessão";
+
+            App.CurrentUserAPP = MyUser[0];
+            dataService.InsertUser(MyUser[0]);
+
+            PopupNavigation.PopAsync();
+
+            /*
             GetUser.IsVisible = false;
             GetUser.IsRunning = false;
             BtnLogIn.IsVisible = true;
             BtnNewAccount.IsVisible = true;
+            */
 
         }
 

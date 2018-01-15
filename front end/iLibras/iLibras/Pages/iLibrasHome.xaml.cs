@@ -15,6 +15,13 @@ namespace iLibras.Pages
             this.Detail = new NavigationPage(new Detail());
 
             iLibras.App.MasterDetail = this;
+
+
+            if (!App.APPIsConnected)
+            {
+                DisplayAlert("iLibras", "Não tem inetrnet disponivel.", "Ok");
+            }
+
         }
     }
 }

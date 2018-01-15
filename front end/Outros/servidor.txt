@@ -1,9 +1,15 @@
+https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2#
+simoneerbsdacosta@gmail.com
+user Si261483@69
+
+
+
 Key Par: iLibras_EC2
 03:fd:d2:4b:57:ae:a2:a4:f7:6a:c6:94:f0:c9:fb:11:39:f1:0c:31
 
 
 MyIp in security Group
-186.205.3.168/32
+
 http:	80		open
 ssh:	22		open
 ssh	3000		open
@@ -28,4 +34,67 @@ Install Node.js:	https://docs.aws.amazon.com/es_es/sdk-for-javascript/v2/develop
 
 Install github:
 	sudo yum install git
+
+list procces node:	 ps aux |grep nod
+
+
+*************************************************************************************
+MySQL
+       	host: 'mydbilibras.ccobzmnzlwis.us-west-2.rds.amazonaws.com',
+        user: 'ilibras',
+        password: 'Si261483',
+        database: 'ilibras'
+
+	ilibras.foto
+		Type filecontetn to .jpg
+
+*************************************************************************************
+
+public directory: ....ilibras/back end/public
+	http://35.160.42.82:3000/img_users/1.jpg
+	http://35.160.42.82:3000/gif_file/load.gif
+
+**************************************************
+
+
+web para teste API:
+	http://resttesttest.com/
+	http://www.hurl.it/
+	POSTMAN
+
+
+list procces node:	 ps aux |grep nod
+START API
+cd ilibras
+cd back\ end
+node index.js
+
+API Categoria
+	GET List all categorias			http://35.160.42.82:3000/api/categoria
+	
+	GET Get a categoria (codigo)		http://35.160.42.82:3000/api/categoria/buscar?codigo=1
+
+	GET Get a categoria (descricao)		http://35.160.42.82:3000/api/categoria/pesquisar?descricao=Despcript categoria 1
+
+	POST New categoria (descricao)		http://35.160.42.82:3000/api/categoria/novo?descricao=DespcriptGET1
+							descricao = Despcript categoria 2
+
+
+API Usuario.js:
+	GET List all users		http://35.160.42.82:3000/api/usuario	
+
+	GET Get a user (codigo)		http://35.160.42.82:3000/api/usuario/buscar?codigo=1
+
+	GET Get a user (email)		http://35.160.42.82:3000/api/usuario/pesquisar?email=leo@yahoo
+
+	GET(Leo) Logar user (email,senha)		http://35.160.42.82:3000/api/usuario/logar?email=leo@yahoo&senha=123
+
+
+
+para configurar los parametros POST
+	http://programacion.net/articulo/gestionar_parametros_post_con_node_js_1186
+
+
+
+
 

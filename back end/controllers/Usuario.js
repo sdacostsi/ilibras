@@ -61,6 +61,44 @@ module.exports = function(app) {
         });
     });
 
+//Leo
+
+    app.get('/api/usuario/logar', function(req, res) {
+        req.assert('email').notEmpty()
+        req.assert('senha').notEmpty()
+
+            console.log('senha *****' + req.query.senha)
+
+        var erros = req.validationErrors()
+
+        if(erros){
+            console.log('Erros de validacao encontrados.\n' + erros)
+            res.status(400).send(erros)
+        }
+        
+        var usuario = {
+            email: req.query.email,
+            senha: req.query.senha
+        };
+
+        var connection = app.models.connectionFactory()
+        var usuarioDao = new app.models.UsuarioDao(connection)
+
+        usuarioDao.logar(usuario, function(erro, resultado){
+            if(erro){
+                console.log(erro)
+                res.status(500).send(erro)
+            } else {
+                res.status(200).json(resultado)
+            }
+        });
+    });
+
+
+//Fin Leo
+
+
+
     app.post('/api/usuario/novo', function(req, res){
         req.assert('email').notEmpty().isEmail()
         req.assert('senha').notEmpty().isLength({min:8})

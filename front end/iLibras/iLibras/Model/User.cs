@@ -1,30 +1,22 @@
 ﻿using Newtonsoft.Json;
 using SQLite.Net.Attributes;
+using System;
 
 namespace iLibras.Model
 {
     public class User
     {
         [PrimaryKey]
-        public int IdClienteTV { get; set; }
-        public string IMEI { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Usuario { get; set; }
-        public string Clave { get; set; }
+        public int codigo_usu { get; set; }
+        public string email_usu { get; set; }
+        public string nome_usu { get; set; }
+        public DateTime datnasc_usu { get; set; }
+        public string fone_usu { get; set; }
+        public int codend_usu { get; set; }
+        public string codper_usu { get; set; }
+        public int codfot_usu { get; set; }
 
-        [JsonProperty(PropertyName = "E-Mail")]
-        public string Email { get; set; } // boludo E-Mail
-        public string Celular { get; set; }
-        public string Activo { get; set; }
-        public string codigoSeguridad { get; set; }
-        public string id_cliente { get; set; }
-        public string id_flota { get; set; }
-        public string DNI { get; set; }
-        public string token_carton { get; set; }
-        public string idCustomerMP { get; set; }
-        public string alta { get; set; }
-        public string key { get; set; }
+
 
     }
 }

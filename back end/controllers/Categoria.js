@@ -1,4 +1,5 @@
 module.exports = function(app) {
+
     app.get('/api/categoria', function(req, res) {
         var connection = app.models.connectionFactory();
         var categoriaDao = new app.models.CategoriaDao(connection);
@@ -62,16 +63,39 @@ module.exports = function(app) {
     });
 
     app.post('/api/categoria/novo', function(req, res){
+//    app.get('/api/categoria/novo', function(req, res){
+
+        var poi = {errorQ:"errorQlo"}
+        
+        console.log("chotoreq.body ********** " + JSON.stringify(req.body));
+        console.log("choto ********** " + JSON.stringify(poi));
+
+        console.log(" *********** //// " + req.params)
+        console.log("choto" + JSON.stringify(req.params));
+
         req.assert('descricao').notEmpty()
 
-        var erros = req.validationErrors()
+        //console.log(" *********** " + req.query.descricao)
+        console.log("chotoreq.body req.assert ********** " + JSON.stringify(req.body));
+
+
+
+        //res.json(req.params)
+        //var erros = req.validationErrors()
+
+        
+        var erros =  req.getValidationResult()
+           .then(function(result){
+             console.log(result.array());
+           });
+        
 
         if(erros){
-            console.log('Erros de validacao encontrados.\n' + erros)
+            console.log('Erros de validacao encontrados.\n' + JSON.stringify(erros))
             res.status(400).send(erros)
         }
 
-        var categoria = req.body
+        var categoria = req.params.descricao // req.query.descricao //req.body
         var connection = app.models.connectionFactory()
         var categoriaDao = new app.models.CategoriaDao(connection)
 

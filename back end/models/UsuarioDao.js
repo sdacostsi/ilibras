@@ -17,6 +17,14 @@ UsuarioDao.prototype.pesquisar = function(descricao, callback){
         [descricao], callback)
 }
 
+//Leo
+UsuarioDao.prototype.logar = function(usuario, callback){
+    this._connection.query('select codigo_usu, email_usu, nome_usu, datnasc_usu, fone_usu, codend_usu, codper_usu, codfot_usu from usuario where email_usu = ? AND senha_usu = ?', 
+        [usuario.email, usuario.senha], callback)
+}
+//Fin Leo
+
+
 UsuarioDao.prototype.salvar = function(usuario, callback){
     this._connection.query('INSERT INTO usuario(email_usu, senha_usu, nome_usu, datnasc_usu, fone_usu, codend_usu, codper_usu, codfot_usu) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', 
         [usuario.email, usuario.senha, usuario.nome, usuario.data_nascimento, usuario.telefone, usuario.codigo_endereco, usuario.codigo_perfil, usuario.codigo_foto],

@@ -30,7 +30,8 @@
                     Margin="0,30,0,0"
                     Source="avatar_black.png"
                     VerticalOptions="Center"
-                    WidthRequest="60">
+                    WidthRequest="60"
+                    x:Name="MenuFotoUser">
                 </controls:CircleImage>
                 <Label
                     BackgroundColor="Transparent"
@@ -40,7 +41,8 @@
                     VerticalOptions="End"
                     Text="EmailUsaurio@gamail.com"
                     TextColor="{StaticResource MenuFontColor}"
-                    WidthRequest="180">
+                    WidthRequest="180"
+                    x:Name="MenuEmailUsuario">
                 </Label>
             </StackLayout>
         </Frame>
@@ -226,22 +228,39 @@
 
 
         <Label
-              FontSize="Small"
-              FontAttributes="Bold"
-              HorizontalOptions="End"
-              Margin="30,10,30,0"
-              Text="Sair"
-              TextColor="{StaticResource MenuFontColor}"
-              VerticalOptions="Center">
+            FontSize="Small"
+            FontAttributes="Bold"
+            HorizontalOptions="End"
+            Margin="30,10,30,0"
+            Text="LOGIN"
+            TextColor="{StaticResource MenuFontColor}"
+            VerticalOptions="Center"
+            x:Name="SairLogin">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnLogin_Clicked"/>
+            </Label.GestureRecognizers>
+
         </Label>
 
+        <Label
+            FontSize="Small"
+            FontAttributes="Bold"
+            HorizontalOptions="End"
+            Margin="30,10,30,0"
+            Text=""
+            TextColor="White"
+            VerticalOptions="Center">
+        </Label>
 
+                <!--
         <Button
             Margin="20,10"
             Text="Login"
             x:Name="btnLogin"/>
-
+-->                
         </StackLayout>
+
+                
     </ScrollView>
 
     </StackLayout>

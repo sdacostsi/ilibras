@@ -38,3 +38,4 @@ C:\Xam.Forms\Simone\ilibras\front end\iLibras\iLibras\obj\Release\iLibras.Pages.
 C:\Xam.Forms\Simone\ilibras\front end\iLibras\iLibras\obj\Release\iLibras.Pages.iLibrasLocalizacao.xaml.g.cs
 C:\Xam.Forms\Simone\ilibras\front end\iLibras\iLibras\obj\Release\iLibras.Pages.iLibrasLogin.xaml.g.cs
 C:\Xam.Forms\Simone\ilibras\front end\iLibras\iLibras\obj\Release\iLibras.dll
+C:\Xam.Forms\Simone\ilibras\front end\iLibras\iLibras\obj\Release\iLibras.csprojResolveAssemblyReference.cache

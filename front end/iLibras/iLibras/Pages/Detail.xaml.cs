@@ -13,6 +13,13 @@ namespace iLibras.Pages
             InitializeComponent();
             _UrlGIF = "https://api.detaxi.net:2500/img/motoristas/panico.gif";
             btnChangeGif.Clicked += BtnChangeGif_Clicked;
+
+
+            if (!App.APPIsConnected)
+            {
+                DisplayAlert("iLibras", "Não tem inetrnet disponivel.", "Ok");
+            }
+
         }
 
         private void BtnChangeGif_Clicked(object sender, EventArgs e)
