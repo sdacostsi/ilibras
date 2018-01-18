@@ -78,7 +78,7 @@ namespace iLibras.Pages
 
             if (MyUser == null)
             {
-                ShowMessage("iLibras", "Não se pode conetar ao servidor, por favor tente novamente.");
+                ShowMessage("iLibras", "Não é posivel conetar ao servidor, por favor tente novamente.");
                 GetUser.IsVisible = false;
                 GetUser.IsRunning = false;
                 BtnLogIn.IsVisible = true;

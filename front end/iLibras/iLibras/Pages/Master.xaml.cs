@@ -24,6 +24,7 @@ namespace iLibras.Pages
             menuEmailUsuario = this.FindByName<Label>("MenuEmailUsuario");
             menuFotoUser = this.FindByName<CircleImage>("MenuFotoUser");
 
+
             if (App.CurrentUserAPP != null &&  !string.IsNullOrEmpty(App.CurrentUserAPP.email_usu))
             {// i have a user
                // btnLogin.IsVisible = false;
@@ -78,7 +79,10 @@ namespace iLibras.Pages
 
         private void menu_GIFLibras_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("titu","GIFLibras","Ok");
+            iLibras.App.MasterDetail.Detail = new NavigationPage(new Detail());
+
+            Detail.DetailPage.CurrentPage = Detail.pageSettings;
+            iLibras.App.MasterDetail.IsPresented = false;
         }
 
         private void menu_Contexto_Tapped(object sender, EventArgs e)
@@ -102,6 +106,32 @@ namespace iLibras.Pages
         {
             DisplayAlert("tit", "iLibras Explica", "Ok");
         }
+
+        private void menu_Tag_Tapped(object sender, EventArgs e)
+        {
+            iLibras.App.MasterDetail.IsPresented = false;
+            //iLibras.App.MasterDetail.Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(iLibrasCadastros)));
+            //iLibras.App.MasterDetail.Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(iLibrasTag)));
+            //this.Navigation.PushAsync(new iLibrasCadastros());
+            //this.Navigation.PushAsync(new iLibrasTag());
+            iLibras.App.MasterDetail.Detail = new NavigationPage(new iLibrasTag());
+        }
+
+
+        private void menu_Categoria_Tapped(object sender, EventArgs e)
+        {
+            iLibras.App.MasterDetail.IsPresented = false;
+            iLibras.App.MasterDetail.Detail = new NavigationPage(new iLibrasCategoria());
+        }
+
+
+        private void menu_Estado_Tapped(object sender, EventArgs e)
+        {
+            iLibras.App.MasterDetail.IsPresented = false;
+            iLibras.App.MasterDetail.Detail = new NavigationPage(new iLibrasRegiao());
+
+        }
+
 
     }
 }

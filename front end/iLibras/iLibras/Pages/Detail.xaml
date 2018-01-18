@@ -6,7 +6,9 @@
     x:Class="iLibras.Pages.Detail"
     Title="Home - iLibras"
     BackgroundColor="Silver">
-    <ContentPage Icon="menu.png">
+    <ContentPage
+        Icon="menu.png"
+        x:Name="PageHome">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
                 <Image Source="home1.png" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -24,7 +26,9 @@
             </StackLayout>
         </StackLayout>
     </ContentPage>
-    <ContentPage Icon="writer.png">
+    <ContentPage 
+        Icon="writer.png"
+        x:Name="PageHome2">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="15">
                 <Image Source="home2.png" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -42,7 +46,9 @@
             </StackLayout>
         </StackLayout>
     </ContentPage>
-    <ContentPage Icon="picture.png">
+    <ContentPage
+        Icon="picture.png"
+        x:Name="PagePaissagem">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
                 <Image Source="paissagem.png" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -69,7 +75,9 @@
             </StackLayout>
         </StackLayout>
     </ContentPage>
-    <ContentPage Icon="dictionary.png">
+    <ContentPage
+        Icon="dictionary.png"
+        x:Name="PageTeste">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
                 <Label Text="Teste"/>
@@ -87,7 +95,9 @@
             </StackLayout>
         </StackLayout>
     </ContentPage>
-    <ContentPage Icon="settings.png">
+    <ContentPage
+        Icon="settings.png"
+        x:Name="PageSettings">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
                 <Label Text="Teste"/>

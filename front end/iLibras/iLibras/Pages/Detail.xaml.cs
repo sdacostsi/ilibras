@@ -8,12 +8,23 @@ namespace iLibras.Pages
     public partial class Detail : TabbedPage
     {
         string _UrlGIF;
+
+        public static TabbedPage DetailPage;
+        public static ContentPage pageSettings;
+
+
+
         public Detail()
         {
             InitializeComponent();
             _UrlGIF = "https://api.detaxi.net:2500/img/motoristas/panico.gif";
             btnChangeGif.Clicked += BtnChangeGif_Clicked;
 
+            DetailPage = this;
+            pageSettings = this.FindByName<ContentPage>("PageSettings");
+
+
+           // this.CurrentPage = PageSettings;
 
             if (!App.APPIsConnected)
             {
